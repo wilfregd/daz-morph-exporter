@@ -126,7 +126,7 @@ class Program
         foreach(var data in figureMorphData)
         {
             string fileDir = Path.GetDirectoryName(filePath);
-            string filename = $"{fileDir}/morphdata_{data.Key.Replace("#", string.Empty)}.txt";
+            string filename = $"{fileDir}/morphdata_{data.Key.Replace("#", string.Empty)}.json";
             File.WriteAllText(filename, data.Value.ToString());
             Console.WriteLine("Created morph data file: " + filename);
         }

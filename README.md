@@ -6,3 +6,8 @@ For now, the morph data includes the **Id**, **url** and **value** of each morph
 
 ### To do:
 - Implement handler for geografts
+
+### Notes:
+- Requires dotnet 7.0
+- Libraries used: 
+    - Json.NET - Newtonsoft

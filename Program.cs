@@ -111,10 +111,18 @@ class Program
 
                 float value = valueToken.Value<float>();
 
+                string region = "Shapes";
+                var regionToken = modifier.SelectToken("region");
+                if(regionToken != null)
+                {
+                    region = regionToken.Value<string>();
+                }
+
                 JObject morphData = new JObject();
                 morphData["id"] = id;
                 morphData["url"] = url.Split('#')[0];
                 morphData["value"] = value;
+                morphData["category"] = region;
 
                 JArray morphArr = figureMorphData[parent];
                 morphArr.Add(morphData);
